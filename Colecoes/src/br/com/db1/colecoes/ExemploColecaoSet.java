@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class ExemploColecaoSet {
 	private Set<String> nomesDb1Start = new HashSet<>();
@@ -37,8 +38,16 @@ public class ExemploColecaoSet {
 		return nomesDb1Start;
 	}
 
-	//public Set<String> getListaOrdenada() {
-		//Collections.sort(nomesDb1Start);
-		//return nomesDb1Start;
-	//}
+	public List<String> getListaOrdenada() {
+		List<String> ordenados = new ArrayList<>();
+		ordenados.addAll(nomesDb1Start);
+		Collections.sort(ordenados);
+		return ordenados;
+	}
+	
+	public Set<String> getListaOrdenada2() {
+		Set<String> ordenados = new TreeSet<>();
+		ordenados.addAll(nomesDb1Start);
+		return ordenados;
+	}
 }
